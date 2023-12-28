@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 import Repositories from './Repositories'; 
-import TopBar from './common/TopBar';
+import TopBar from '../components/common/Topbar';
 
 const Dashboard = () => {
   const [username, setUsername] = useState('');

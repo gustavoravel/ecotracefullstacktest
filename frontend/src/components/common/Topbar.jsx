@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import { useAuth } from '../contexts/AuthContext';
+import useAuth  from '../../services/auth';
 
 const TopBar = () => {
   const { user } = useAuth();
@@ -13,7 +13,7 @@ const TopBar = () => {
     <AppBar position="fixed">
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Your Website
+          Github Repo App
         </Typography>
         {user && (
           <div>

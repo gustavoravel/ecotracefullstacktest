@@ -7,7 +7,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
-import TopBar from './common/TopBar';
+import TopBar from '../components/common/Topbar';
 
 const mockHistory = [
   {

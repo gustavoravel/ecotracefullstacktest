@@ -34,7 +34,7 @@ function Login() {
       navigate('/dashboard');
     } catch (error) {
       // Tratar erros de login aqui
-      console.error(error);
+      console.error('Erro ao fazer login:', error);
     }
   };
 
@@ -62,7 +62,7 @@ function Login() {
               required
               fullWidth
               id="email"
-              label="Email Address"
+              label="Email"
               name="email"
               autoComplete="email"
               autoFocus
@@ -72,14 +72,14 @@ function Login() {
               required
               fullWidth
               name="password"
-              label="Password"
+              label="Senha"
               type="password"
               id="password"
               autoComplete="current-password"
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="Lembrar"
             />
             <Button
               type="submit"
@@ -87,17 +87,17 @@ function Login() {
               variant="contained"
               sx={{ mt: 3, mb: 2, bgcolor: theme.palette.primary.main }}
             >
-              Sign In
+              Entrar
             </Button>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
-                  Forgot password?
+                  Esqueceu a Senha?
                 </Link>
               </Grid>
               <Grid item>
                 <Link href="/signup" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                  {"Não possui uma Conta? Cadastrar"}
                 </Link>
               </Grid>
             </Grid>

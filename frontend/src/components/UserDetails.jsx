@@ -3,8 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import TopBar from './common/TopBar'; 
-import EditProfileModal from './EditProfileModal'; // Criar este componente para a edição do perfil
+import TopBar from '../components/common/Topbar'; 
+//import EditProfileModal from './EditProfileModal'; // Criar este componente para a edição do perfil
 
 const UserDetails = ({ currentUser, logout }) => {
   const { username } = useParams();
@@ -104,7 +104,7 @@ const UserDetails = ({ currentUser, logout }) => {
           <Typography variant="body1">Loading...</Typography>
         )}
       </div>
-      <EditProfileModal open={isEditing} onClose={handleCloseEditModal} />
+      {/*<EditProfileModal open={isEditing} onClose={handleCloseEditModal} />*/}
     </Container>
   );
 };
