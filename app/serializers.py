@@ -96,7 +96,14 @@ class QueryHistorySerializer(serializers.ModelSerializer):
 
     ## Visão Geral
 
-    Um serializador para o modelo `QueryHistory` que estende o `ModelSerializer` fornecido pelo Django Rest Framework. Este serializador é projetado para lidar com a serialização e desserialização dos dados de histórico de consulta, incluindo o usuário associado.
+    O `QueryHistorySerializer` é um serializador para o modelo `QueryHistory`, estendendo o `ModelSerializer` fornecido pelo Django Rest Framework. Este serializador lida com a serialização e desserialização dos dados de histórico de consulta, incluindo o usuário associado.
+
+    ## Campos Adicionais
+
+    - `success`: BooleanField
+    - `repositories_count`: PositiveIntegerField
+
+    Estes campos foram adicionados para refletir o status da consulta (se foi localizado com sucesso) e a quantidade de repositórios encontrados.
 
     ## Campos
 
@@ -122,7 +129,7 @@ class QueryHistorySerializer(serializers.ModelSerializer):
         # Realize ações adicionais com o objeto de histórico de consulta criado
     else:
         # Lidar com erros de validação do serializador
-    ```
+        ```
 
     Observação: Esta documentação pressupõe a existência de um modelo QueryHistory.    
     """

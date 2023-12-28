@@ -88,6 +88,8 @@ class QueryHistory(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     query = models.CharField(max_length=255)
     timestamp = models.DateTimeField(auto_now_add=True)
+    success = models.BooleanField(default=False)
+    repositories_count = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return f"{self.user.username} - {self.query}"
